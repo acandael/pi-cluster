@@ -31,3 +31,16 @@ spec:
   values:
     grafana:
       adminPassword: erewhon1
+      ingress:
+        enabled: true
+
+        ingressClassName: traefik
+
+        ## Hostnames.
+        ## Must be provided if Ingress is enable.
+        ##
+        hosts:
+          - grs.webmoov.org
+
+        ## Path for grafana ingress
+        path: /
